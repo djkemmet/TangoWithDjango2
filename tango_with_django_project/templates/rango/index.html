@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+
+<!-- Tell Django to load our static files dirs-->
+{% load staticfiles %}
+
 <html>
 
     <head>
@@ -13,6 +17,7 @@
         </div>
         <div>
             <a href="/rango/about/">About</a><br />
+            <img src="{% static 'images/Rango.jpg' %}" alt=Picture of Rango" />
         </div>
     </body>
 
