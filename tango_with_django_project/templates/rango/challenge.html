@@ -1,30 +1,25 @@
 <!DOCTYPE html>
 
-<!-- Tell Django to load our static files dirs-->
 {% load static %}
+<body>
 
-<html>
-
-    <head>
-        <title> Rango</title>
-
+    <header>
+        <title>This is the chapter Challenge Page.</title>
 
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 
 
-    </head>
+    </header>
 
     <body>
-        <h1>Rango says...</h1>
-        <div>
-            hey there partner! <br />
-            <strong> {{ boldmessage }} </strong><br />
-        </div>
-        <div>
-            <a href="/rango/about/">About</a><br />
-            <img src="{% static 'images/Rango.jpg' %}" alt="Picture of Rango" />
-        </div>
+        I had to do this because of <b>{{ reason }}</b>
+        <br />
+        <center>
+            <img src="{% static 'images/wompwomp.png' %}" />
+        </center>
+        
+        
     </body>
 
-</html>
+</body>
