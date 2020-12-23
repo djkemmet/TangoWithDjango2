@@ -8,11 +8,15 @@ def index(request):
     return render(request, 'rango/index.html', context=context_dict)
 
 def about(request):
-    return HttpResponse("""
-    
-    
-    <h1>Rango says here is the about page.</h1>
-    <a href="/">Home</a>
+    about_data = {
+        'my_name': 'dj',
+        
+    }
 
-    """)
+    return render(request, 'rango/about.html', context=about_data)
 
+def challenge(request):
+    challenge_context = {
+        'reason': 'because the book said so.',
+    }
+    return render(request, 'rango/challenge.html', context=challenge_context)

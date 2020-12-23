@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<body>
+
+    <header>
+        <title>This is the chapter Challenge Page.</title>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+
+    </header>
+
+    <body style="background-color:grey;">
+        <div class="container" style="background-color:white; height:100%;">
+            <div class="row">
+                <h1>About Rango</h1>
+            </div>
+
+            <!-- Data and such-->
+            <div class="row" id=page_data">
+                <div class="col-md-4">
+                    <h2>Links</h2>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/rango/about/">About</a></li> 
+                    </ul>
+                </div>
+
+                <div class="col-md-4">
+                    <h2>Dead Oaks</h2>
+                </div>
+
+                <div class="col-md-4">
+                    <h2>The Cat Image They Wanted Posted</h2>
+                    <img src="{{ MEDIA_URL }}cat.jpeg" alt="There should be a cat here"/>
+                </div>
+            </div>
+
+            <!-- Book Requirement-->
+            <div class="row">
+                <h2>This tutorial has been put together by {{ my_name }}</h2>
+                <img src="{% static 'images/Rango.jpg' %}"
+            </div>
+
+            </div>
+        </div>
+
+    </body>
+
+
+
+
+    </body>
