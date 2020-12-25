@@ -6,6 +6,9 @@ from django.db import models
 class Category(models.Model):
     name = models.CharField(max_length=128, unique=True)
 
+    class Meta:
+        verbose_name_plural = 'Categories'
+
     # When we reference this object in the GUI / application, what will the String
     # representing the instance of a particular category model be set to? in this case, 
     # it will be the name property
@@ -23,3 +26,4 @@ class Page(models.Model):
 
     def __str__(self):
         return self.title
+
