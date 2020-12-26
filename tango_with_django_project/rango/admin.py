@@ -1,6 +1,22 @@
 from django.contrib import admin
 from rango import models
 
+class PageAdmin(admin.ModelAdmin):
+    # Fields are the values you're able to change 
+    # from the Admin console. so I could hide URLs from 
+    # being edited by dropping it from the list of fields.
+    fields = ['title', 'views',]
+
+    # The list_display variable sets which attributes
+    # of the model are going to be displayed in the list
+    # of models displayed in the admin page for a given
+    # model. 
+    list_display = ['category','title', 'url']
+
+
+class CategoryAdmin(admin.ModelAdmin):
+    fields = ['name', 'views', 'likes']
+
 # Register your models here.
-admin.site.register(models.Page)
-admin.site.register(models.Category)
+admin.site.register(models.Page, PageAdmin)
+admin.site.register(models.Category, CategoryAdmin)
