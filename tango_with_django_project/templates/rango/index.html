@@ -6,7 +6,7 @@
 <html>
 
     <head>
-        <title> Rango</title>
+        <title>Rango</title>
 
 
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
@@ -21,6 +21,21 @@
             hey there partner! <br />
             <strong> {{ boldmessage }} </strong><br />
         </div>
+
+        <div>
+            {% if categories %}
+                <ul>
+                    {% for category in categories %}
+                        <li>{{ category.name}}</li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <strong> There are no categories present</strong>
+            {% endif %}
+        </div>
+
+
+
         <div>
             <a href="/rango/about/">About</a><br />
             <img src="{% static 'images/Rango.jpg' %}" alt="Picture of Rango" />
