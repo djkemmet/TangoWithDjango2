@@ -15,7 +15,10 @@ class PageAdmin(admin.ModelAdmin):
 
 
 class CategoryAdmin(admin.ModelAdmin):
-    fields = ['name', 'views', 'likes']
+
+    prepopulated_fields = { 'slug':('name',)}
+
+    fields = ['name', 'views', 'likes', 'slug']
 
 # Register your models here.
 admin.site.register(models.Page, PageAdmin)
