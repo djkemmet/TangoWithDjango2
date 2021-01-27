@@ -107,6 +107,19 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
+# Password Hashers
+# we;ve installed bcrypt into our environment and how now defined BCryptSHA256PasswordHasher and 
+# BCryptPasswordHasher to be our primary password hashers. if these fail, django will fall back
+# to PBKDF2PasswordHasher and PBKDF2SHA1PasswordHasher
+
+PASSWORD_HASHERS = [
+    'django.contrib.auth.hashers.BCryptSHA256PassowrdHasher',
+    'django.contrib.auth.hashers.BCryptPassowrdHasher',
+    'django.contrib.auth.hashers.PBKDF2PasswordHasher',
+    'django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher'
+]
+
+
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/
 
