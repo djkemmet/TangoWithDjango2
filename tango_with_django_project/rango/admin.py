@@ -20,6 +20,12 @@ class CategoryAdmin(admin.ModelAdmin):
 
     fields = ['name', 'views', 'likes', 'slug']
 
+class UserProfileAdmin(admin.ModelAdmin):
+    list_display = ['username', 'user']
+
+
+
 # Register your models here.
 admin.site.register(models.Page, PageAdmin)
 admin.site.register(models.Category, CategoryAdmin)
+admin.site.register(models.UserProfile, UserProfileAdmin)
